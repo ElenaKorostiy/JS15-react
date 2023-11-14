@@ -1,0 +1,27 @@
+#root{
+    box-sizing: border-box;
+    text-align: center;
+    height: 100vh;
+   } 
+.too{
+    width: 120px;
+    height: 60px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.all{
+    margin-top: 10px;
+    background-color: bisque;
+    height: 260px;
+}
+.tree{
+    width: 120px;
+    height: 60px;
+    border-radius: 15px;
+    
+}
+.free{
+    width: 120px;
+    height: 60px;
+    border-radius: 15px;
+}

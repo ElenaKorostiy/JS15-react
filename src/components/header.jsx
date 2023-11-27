@@ -1,23 +1,28 @@
 import { useUserContext } from '../components/provider/user';
+import { Button } from './button';
 
 export const Header = () => {
-  const { user, loginUser } = useUserContext();
-
-  const handleLogin = () => {
-    if (!user) {
-      loginUser();
-    }
+  const { user, setUser } = useUserContext();
+ const onClick = async () => {
+    const resp = await fetch("https://dummyjson.com/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: "kminchelle",
+        password: "0lelplR",
+      }),
+    });
+    const data = await resp.json();
+    setUser(data);
   };
 
   return (
-    <div>
-      <h1>Header</h1>
+    <header style={{ display: "flex", justifyContent: "flex-end" }}>
       {user ? (
-        <p>Hello, {user.username}</p>
+        <p>{user.username}</p>
       ) : (
-        <button onClick={handleLogin}>Login</button>
+        <Button text="Login" onClick={onClick} />
       )}
-    </div>
+    </header>
   );
 };
-

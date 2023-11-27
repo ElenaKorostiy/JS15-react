@@ -1,14 +1,23 @@
-import { useUser } from './components/provider/user'
+import { useUserContext } from "../components/provider/user";
 
-export const Post = ({ post }) => {
-  const { user } = useUser();
+export const Post = ({title, authorId, body  }) => {
+  const { user } = useUserContext();
+  const author = authorId === user?.id;
 
   return (
-    <div>
-      <h2>{post.title}</h2>
-      <p>{post.content}</p>
-      {user && user.id === post.authorId && <p>You are the author of this post.</p>}
-    </div>
+     <article
+      style={{
+        border: "1px solid black",
+        borderRadius: "4px",
+        padding: "20px",
+      }}
+      >
+      <div style={{ display: "flex" }}>
+        <h1>{title}</h1>
+        {author && <span>Author</span>}
+      </div>
+      <p>{body}</p>
+    </article>
   );
 };
 

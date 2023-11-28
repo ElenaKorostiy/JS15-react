@@ -1,6 +1,6 @@
 
 body{
-  background-color: rgb(246, 210, 243);
+  background-color: rgba(160, 228, 239, 0.229);
 }
 header{
   display: flex;
@@ -14,8 +14,8 @@ header{
   border: 2px solid #ccc; 
   left: 220px;
   will-change: filter;
-  transition: filter 300ms;
-  animation: photo 14s linear infinite; 
+  /* transition: filter 300ms;
+  animation: photo 14s linear infinite;  */
 }
 .text{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 

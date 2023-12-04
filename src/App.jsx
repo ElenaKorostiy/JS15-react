@@ -1,14 +1,23 @@
-import React from 'react';
-import { Formik, Form, Field} from "formik";
+import { Formik } from "formik";
+import { Button } from "./components/button";
 import { Input } from "./input";
 import { InputWrap } from './input-wrap';
+import { Counter } from "./components/counter";
+import { CheckoutForm } from "./components/form";
+import { FormWithHook } from "./components/form-with-hook";
+import { SignUp, SignUpHook } from "./components/signup";
 
 
 import "./App.css"
 
 export const App = () => {
     return (
-    <div>
+      <div>
+        <Counter>
+        {(count, onClick) => {
+          return <Button text={count} onClick={onClick} />;
+        }}
+      </Counter>
   <InputWrap>
     {(value, onChange) => <Input value={value} onChange={onChange} />}
   </InputWrap>
@@ -22,16 +31,14 @@ export const App = () => {
   >
     {(props) => {
       console.log(props);
-      return (
-        <Form>
-          <label>
-            <Field name="firstname"/>
-          </label>
-          <button type="submit">Submit</button>
-        </Form>
-      );
-    }}
-  </Formik>
+            return <CheckoutForm />; 
+      }}
+        </Formik>
+        <FormWithHook />
+       <br />
+      <SignUp />
+      <br />
+      <SignUpHook />
 </div>
   );
 };

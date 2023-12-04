@@ -9,13 +9,11 @@ header{
 .photo{
   width: 500px;
   height: 500px;
-  border-radius: 30px;
+  border-radius: 130px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
   border: 2px solid #ccc; 
   left: 220px;
   will-change: filter;
-  /* transition: filter 300ms;
-  animation: photo 14s linear infinite;  */
 }
 .text{
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
@@ -24,8 +22,6 @@ header{
   background-color: white;
   border-radius: 60px;
   width: 300px;
-  /* height: 420px; */
-  
 }
 .Hello{
   color: #09b125;

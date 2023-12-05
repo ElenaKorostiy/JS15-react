@@ -19,7 +19,6 @@ export const App = () => {
   
   return (
     <>
-     
       <button className="lang" onClick={toggleLanguage}>Language</button>
       <Hero />
       <Main />

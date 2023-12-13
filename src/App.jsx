@@ -1,60 +1,33 @@
-import { useForm, Controller } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
+import { InputField } from './components/input';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
 
+const schema = yup.object({
+  firstName: yup.string().required(),
+  lastName: yup.string().required(),
+  city: yup.string().required(),
+  
+}).required();
 
-export const MyForm = () => {
-  const { handleSubmit, control, formState: { errors } } = useForm();
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+export const App = () => {
+   const { register, handleSubmit, formState:{ errors } } = useForm({
+    resolver: yupResolver(schema)
+  });
+
+   const onSubmit = (data) => console.log(data);
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-    <div>
-        <label>First Name</label>
-        <Controller
-          name="firstName"
-          control={control}
-          defaultValue=""
-          rules={{ required: "First name is required" }}
-          render={({ field }) => (
-            <div>
-              <input {...field} placeholder="First Name" />
-              {errors.firstName && <p>{errors.firstName.message}</p>}
-            </div>
-          )}
-        />
-      </div>
       <br/>
-      <div>
-        <label>Last Name</label>
-        <Controller
-          name="lastName"
-          control={control}
-          defaultValue=""
-          rules={{ required: "Last name is required" }}
-          render={({ field }) => (
-            <div>
-              <input {...field} placeholder="Last Name" />
-              {errors.lastName && <p>{errors.lastName.message}</p>}
-            </div>
-          )}
-        />
-      </div>
+      <InputField label="First Name" {...register("firstName")} />
+      <p>{errors.firstName?.message}</p>
       <br/>
-      <div>
-        <label>City</label>
-        <Controller
-          name="city"
-          control={control}
-          defaultValue=""
-          rules={{ required: "City is required" }}
-          render={({ field }) => (
-            <div>
-              <input {...field} placeholder="City" />
-              {errors.city && <p>{errors.city.message}</p>}
-            </div>
-          )}
-        />
-      </div>
+      <InputField label="Last Name" {...register("lastName")} />
+      <p>{errors.lastName?.message}</p>
+      <br/>
+      <InputField label="City" {...register("city")} />
+      <p>{errors.city?.message}</p>
       <br/>
       <button type="submit">Submit</button>
     </form>

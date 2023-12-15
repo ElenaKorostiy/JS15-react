@@ -14,7 +14,7 @@ export const ProductInfo = () => {
         if (!response.ok) {
           throw new Error("Error");
         }
-          const data = await response.json();
+        const data = await response.json();
           
         setProduct(data);
       } catch (error) {
@@ -24,29 +24,34 @@ export const ProductInfo = () => {
     fetchProductInfo();
   }, [id]);
 
-  return (
-    <div className="all">
-      <h2>Product Info</h2>
-      {product ? (
+  return (<div className="all">
+    <h2>Product Info</h2>
+    {product ? (
+      <div>
+        <img src={product.thumbnail} alt={product.title} />
+        <h3>{product.title}</h3>
+        <p>Price: ${product.price}</p>
+        <Link to="/">
+          <button>Go back to List</button>
+        </Link>
         <div>
-          <img src={product.thumbnail} alt={product.title} />
-          <h3>{product.title}</h3>
-          <p>Price: ${product.price}</p>
-          <Link to="/">
-                <button>Go back to List</button>
-          </Link>
-          <div>
-            <h4>All Properties:</h4>
-            {Object.keys(product).map((key) => (
+          <h4>All Properties:</h4>
+          {Object.keys(product).map((key) => {
+              if (key.toLowerCase() === 'images') {
+              return null;
+            }
+
+            return (
               <p key={key}>
                 {key}: {product[key]}
               </p>
-            ))}
-          </div>
+            );
+          })}
         </div>
-      ) : (
-        <p>Loading...</p>
-      )}
-    </div>
+      </div>
+    ) : (
+      <p>Loading...</p>
+    )}
+  </div>
   );
 };

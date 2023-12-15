@@ -1,0 +1,7 @@
+body{
+    text-align: center;
+}
+
+.selected{
+    background-color: rgba(0, 255, 255, 0.756);
+}

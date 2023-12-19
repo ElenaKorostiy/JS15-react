@@ -1,9 +1,17 @@
 import { createStore, combineReducers, compose } from "redux";
+import { themeReducer } from "./theme/reducer";
+import { todoReducer } from "./todo/reduсer";
 
+const rootReducer = combineReducers({
+  theme: themeReducer,
+  todo: todoReducer,
+});
 
-const rootReduser = combineReducers({});
-
-export const store = createStore(rootReduser{}, compose(
+export const store = createStore(
+  rootReducer,
+  {},
+  compose(
     window.__REDUX_DEVTOOLS_EXTENSION__ &&
-    window.__REDUX_DEVTOOLS_EXTENSION__(),
-));
+      window.__REDUX_DEVTOOLS_EXTENSION__(),
+  ),
+);

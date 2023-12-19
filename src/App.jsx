@@ -8,8 +8,6 @@ import { Blog } from './pages/blog';
 import { NotFound } from './components/notfound';
 
 
-import "./App.css"
-
 export const App = () => {
   return (
     <BrowserRouter>
@@ -34,17 +32,6 @@ export const App = () => {
         </Switch>
         <div>
           <h1>Welcome to my blog website!</h1>
-          {/* Закоментований код, який вибиває помилку */}
-          {/* <div className="posts">
-            {posts.map((post, index) => (
-              <Post
-                key={index}
-                username={post.username}
-                message={post.message}
-                timestamp={post.timestamp}
-              />
-            ))}
-          </div> */}
           <br />
           <br />
           <div>

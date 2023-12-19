@@ -7,6 +7,7 @@ import { InputField } from "../components/input";
 import "./contact.css";
 
 
+
 const schema = yup.object({
   name: yup.string().required(),
   email: yup.string().required().email('Invalid email address').matches(/@/, 'Email must contain "@" symbol'),

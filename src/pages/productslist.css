@@ -1,0 +1,12 @@
+.card{
+    border: 1px solid;
+    background-color: azure;
+    width: 700px;
+    margin: 20px;
+}
+.box{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  border: 1px solid;
+  }

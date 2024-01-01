@@ -1,0 +1,14 @@
+.list-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    }
+.box{
+  border: 2px solid #00000089;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: rgb(220, 245, 240);
+ 
+}    

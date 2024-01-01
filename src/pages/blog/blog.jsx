@@ -9,7 +9,7 @@ export const Blog = () => {
        <Link to="/">
            <button>Go back</button>
         </Link>
-        <Route path="/" exact component={PostList} />
+        <Route path="/blog" exact component={PostList} />          
     </div>
     )
 };

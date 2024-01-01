@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { yupResolver } from '@hookform/resolvers/yup';
+import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from 'react-hook-form';
-import { InputField } from "../components/input";
+import { InputField } from "../../components/input";
 
 import "./contact.css";
 
@@ -18,7 +18,7 @@ const schema = yup.object({
 export const Contact = () => {
 
      const { register, handleSubmit, formState:{ errors } } = useForm({
-    resolver: yupResolver(schema)
+       resolver: yupResolver(schema)
   });
 
     const onSubmit = (data) => console.log(data);
@@ -32,7 +32,8 @@ export const Contact = () => {
        <br/>
        <br/>
       <form  onSubmit={handleSubmit(onSubmit)}>
-      <br/>
+          <br />
+          <br/>
       <InputField label="Name" {...register("name")} />
       <p>{errors.name?.message}</p>
       <br/>

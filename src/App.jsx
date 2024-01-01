@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Footer } from './footer/footer';
+// import { Footer } from './footer/footer';
 import { Menu } from './menu/menu';
-import { Contact } from './pages/contact';
+import { Contact } from './pages/contact/contact';
 import { About } from './pages/about';
-import { Blog } from './pages/blog';
+import { Blog } from './pages/blog/blog';
 import { NotFound } from './components/notfound';
+import { PostList } from './pages/blog/postlist';
 
 
 export const App = () => {
@@ -16,9 +17,9 @@ export const App = () => {
           <Route path="/" exact>
             <Menu />
           </Route>
-          <Route path="/footer">
+          {/* <Route path="/footer">
             <Footer />
-          </Route>
+          </Route> */}
           <Route path="/contact">
             <Contact />
           </Route>
@@ -28,6 +29,7 @@ export const App = () => {
           <Route path="/blog">
             <Blog />
           </Route>
+          <Route path="/" exact component={PostList} />
           <Route component={NotFound} />
         </Switch>
         <div>

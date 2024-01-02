@@ -2,18 +2,20 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Menu } from './menu/menu';
 import { Contact } from './pages/contact/contact';
-import { About } from './pages/about';
+import { AddBlog } from './pages/about';
 import { Blog } from './pages/blog/blog';
 import { NotFound } from './components/notfound';
 import { PostList } from './pages/blog/postlist';
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 
+import "./App.css";
+
 export const App = () => {
   return (
     <BrowserRouter>
       <Provider store={store}>
-      <main>
+      <main >
         <Switch>
           <Route path="/" exact>
             <Menu />
@@ -25,15 +27,15 @@ export const App = () => {
             <Contact />
           </Route>
           <Route path="/about">
-            <About />
+            <AddBlog />
           </Route>
           <Route path="/blog">
             <PostList />
           </Route>
           <Route component={NotFound} />
         </Switch>
-        <div>
-          <h1>Welcome to my blog website!</h1>
+          <div className='main-cover'>
+            <h1>Welcome to my blog website!</h1>
           <br />
           <br />
           <div>

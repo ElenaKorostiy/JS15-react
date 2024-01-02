@@ -1,0 +1,6 @@
+.main-cover{
+    background-image: url('./assets/foto1.jpg');
+    background-size: cover;  /* Розтягнути зображення на весь елемент */
+    background-position: center;  /* Вирівнювання зображення по центру */
+    height: 600px; 
+}

@@ -46,3 +46,7 @@ export const selectPosts = state => state.posts.postsList?.data || [];
 export const usePostsSelector = () =>
   useSelector((state) => state.posts.postsList);
 
+// export const selectPosts = createSelector(
+//   state => state.posts.postsList?.data || [],
+//   posts => posts
+// );

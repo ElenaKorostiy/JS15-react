@@ -13,7 +13,7 @@ export const Menu = () => {
                     <Link to="/blog">Blog</Link>
                 </li>
                 <li>
-                    <Link to="/about">About</Link>
+                    <Link to="/about">Add Blog</Link>
                 </li>
                 <li>
                     <Link to="/contact">Contact</Link>

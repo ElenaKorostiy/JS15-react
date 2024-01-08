@@ -1,0 +1,39 @@
+.all{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.second{
+  padding: 10px;
+  font-size: 16px;
+  background-color: #12e1da;
+  color: black;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.second:hover {
+  background-color: #0083b3;
+} 
+
+.third{
+    width: 100%;
+}
+h2,
+p {
+    margin-left: 10px;
+}
+.fourth{
+    width: 300px;
+    height: 60px; 
+    padding: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+}

@@ -1,0 +1,26 @@
+.post-container {
+  display: flex;
+}
+
+.reaction-buttons {
+  display: flex;
+  background: transparent;
+}
+
+.reaction-buttons button {
+  margin-right: 8px;
+  background: transparent; 
+  border: none;
+  cursor: pointer;
+}
+.go-to-blog-button {
+  background-color: rgba(15, 170, 227, 0.63);
+  border-radius: 5px;
+  border: none;
+}
+.go-to-blog-button:hover {
+  background-color: rgba(10, 237, 206, 0.63);
+}
+.bloglink{
+   margin-left: auto;
+}

@@ -1,0 +1,35 @@
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+.blog-item {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #878383;
+  border-radius: 25px;
+  background-color: rgba(145, 227, 227, 0.7);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.blog-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+ }
+
+.blog-item h2 {
+  margin-top: 10px;
+}
+
+.blog-item p {
+  margin-top: 5px;
+}
+.page,
+.too{
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

@@ -1,0 +1,31 @@
+.menu {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center; 
+
+  background-color: hsla(178, 85%, 46%, 0.762); 
+  padding: 10px; 
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px; 
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease; 
+}
+
+.menu a:hover {
+  color: #ff4500; 
+}
